@@ -12,10 +12,10 @@
     justify-content: center;
     align-items: center;
 }
-
 body {
     background: gray;
 }
+/** MAIN (WRAP-ALL) **/
 main {
     width: 90%;
     margin: auto;
@@ -24,19 +24,17 @@ main {
     flex-direction: column;
     gap: 50px;
 }
-
 .line {
-    position: absolute;
     width: 10px;
     height: 1400px;
     background: white;
-    right: 50%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
     top: 55px;
     z-index: -1;
-}
-.align-right {
-    display: flex;
-    justify-content: flex-end;
 }
 section {
     width: 45%;
@@ -45,16 +43,11 @@ section {
     background: white;
     position: relative;
 }
-h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: rgb(27, 79, 82);
-    margin: 0;
+.align-right {
+    display: flex;
+    justify-content: flex-end;
 }
-span {
-    color: gray;
-    font-size: 15px;
-}
+/** ARROWS SECTION **/
 .fa-caret-left {
     color: white;
     font-size: 23px;
@@ -66,6 +59,18 @@ span {
     font-size: 23px;
     position: absolute;
     right: -7px;
+}
+/** TEXT SECTION **/
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(27, 79, 82);
+    margin: 0;
+}
+p {
+    color: gray;
+    font-size: 15px;
+    margin-bottom: 0;
 }
 .learned {
     border: 2px solid rgb(27, 79, 82);
