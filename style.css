@@ -1,0 +1,66 @@
+/** GENERAL **/
+* {
+    box-sizing: border-box;
+}
+.container {
+    max-width: 800px;
+    padding: 0px 20px;
+    margin: auto;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background: gray;
+}
+main {
+    width: 90%;
+    margin: auto;
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.line {
+    position: absolute;
+    width: 10px;
+    height: 800px;
+    background: white;
+    right: 50%;
+    top: 45px;
+    z-index: -1;
+}
+.align-right {
+    display: flex;
+    justify-content: flex-end;
+}
+section {
+    width: 45%;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+}
+
+section::after {
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background: red;
+    position: absolute;
+    left: 50%;
+}
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(27, 79, 82);
+    margin: 0;
+}
+span {
+    color: gray;
+    font-size: 15px;
+}
