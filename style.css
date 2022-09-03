@@ -2,11 +2,6 @@
 * {
     box-sizing: border-box;
 }
-.container {
-    max-width: 800px;
-    padding: 0px 20px;
-    margin: auto;
-}
 .center {
     display: flex;
     justify-content: center;
@@ -15,18 +10,22 @@
 body {
     background: gray;
 }
-/** MAIN (WRAP-ALL) **/
+.hide-it {
+    display: none;
+}
+/** ROADMAP **/
 main {
-    width: 90%;
+    max-width: 800px;
     margin: auto;
-    padding: 25px 0px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 10px;
+    position: relative;
 }
 .line {
     width: 10px;
-    height: 1400px;
+    height: 100%;
     background: white;
     position: absolute;
     margin-left: auto;
@@ -36,9 +35,22 @@ main {
     top: 55px;
     z-index: -1;
 }
+.avatar {
+    position: absolute;
+    right: -90px;
+    top: -32px;
+    height: 90px;
+    width: 90px;
+}
+/** BUBBLES **/
 section {
-    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(50% - 41px);
+    min-height: 165px;
     padding: 15px;
+    border: 2px solid white;
     border-radius: 10px;
     background: white;
     position: relative;
@@ -47,12 +59,61 @@ section {
     display: flex;
     justify-content: flex-end;
 }
-/** ARROWS SECTION **/
+h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(27, 79, 82);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+p {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.learned {
+    border: 2px solid rgb(27, 79, 82);
+    background: rgb(197, 191, 191);
+}
+.learning {
+    border: 2px solid rgb(255, 209, 25);
+}
+/** ICONS COMPLETION **/
+.fa-medal {
+    color: rgb(180, 180, 43);
+    font-size: 40px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.fa-trophy {
+    position: absolute;
+    font-size: 20px;
+    top: 16px;
+}
+.fa-trophy-left {
+    right: -55px;
+}
+.fa-trophy-right {
+    left: -54px;
+}
+/** ARROW BUBBLES + CIRCLE MAIN LINE**/   
 .fa-caret-left {
     color: white;
     font-size: 23px;
     position: absolute;
     left: -7px;
+}
+.fa-caret-left::after { /** CIRCLE **/
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    left: -63px;
+    top: -17px;
 }
 .fa-caret-right {
     color: white;
@@ -60,21 +121,55 @@ section {
     position: absolute;
     right: -7px;
 }
-/** TEXT SECTION **/
-h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: rgb(27, 79, 82);
-    margin: 0;
+.fa-caret-right::after { /** CIRCLE **/
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: absolute;
+    right: -63px;
+    top: -17px;
 }
-p {
-    color: gray;
-    font-size: 15px;
-    margin-bottom: 0;
+.fa-caret-learned {
+    color: rgb(197, 191, 191);
 }
-.learned {
-    border: 2px solid rgb(27, 79, 82);
+.fa-caret-learned::after {
+    background: rgb(197, 191, 191);
 }
-.learning {
-    border: 2px solid rgb(255, 209, 25);
+
+/** MEDIA QUERY PHONES **/
+@media screen and (max-width: 768px) {
+    .hide-it {
+        display: initial;
+    }
+    .line, .fa-caret-right, .fa-caret-right::after, .fa-trophy-left {
+        display: none;
+    }
+    .align-left {
+        display: flex;
+        justify-content: flex-end;
+    }
+    section {
+        width: 92%;
+    }
+    .avatar {
+        height: 55px;
+        width: 55px;
+        top: -14px;
+        left: -55px;
+    }
+    .fa-caret-left::after {
+        width: 25px;
+        height: 25px;
+        left: -37px;
+        top: -5px;
+    }
+    .fa-trophy-right {
+        font-size: 15px;
+        left: -38px;
+        bottom: -4px;
+        top: 17px;
+    }
 }
