@@ -2,15 +2,6 @@
 * {
     box-sizing: border-box;
 }
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.hide-it {
-    display: none;
-}
-/** BODY **/
 main {
     width: 4350px;
     height: 97.3vh;
@@ -59,7 +50,7 @@ main {
 .wrap-section {
     display: flex;
     gap: 70px;
-    margin-top: 70px;
+    margin-top: 1.61%;
     padding: 25px 0px 25px 190px;
 }
 section {
@@ -99,23 +90,23 @@ h2, p {
 }
 .fa-caret-down {
     position: absolute;
-    bottom: 212px;
-    margin-left: 197px;
-    font-size: 46px;
+    bottom: 32.8%;
+    margin-left: 173px;
+    font-size: 68px;
     color: rgb(4, 4, 4);
 }
 p {
-    margin-top: 20px;
+    margin-top: 16%;
 }
 .p-margin {
-    margin-top: 37px;
+    margin-top: 24.9%;
 }
 /** LINE **/
 .line {
     display: flex;
     height: 10px;
     width: 4208px;
-    margin: 75px 51px 0px 90px;
+    margin: 1.72% 51px 0px 90px;
     background-image: url("images/bricks.png");
     position: relative;
 }
