@@ -10,19 +10,118 @@
 .hide-it {
     display: none;
 }
-/** ROADMAP **/
-body {
-    background: gray;
-}
+/** BODY **/
 main {
-    height: 100vh;
+    width: 4350px;
+    height: 97.3vh;
+    background-image: url("images/grass.png");
 }
-.line {
+/** SCREEN **/
+.screen {
+    display: flex;
+    padding: 4px;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    height: 140px;
+    min-width: 110px;
+    background: rgb(249, 158, 31);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 12px;
+}
+.logo img {
+    height: 140px;
     width: 100%;
-    height: 10px;
-    background: white;
+}
+.misc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.misc div, .misc a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+    background: rgb(249, 158, 31);
+    color: rgb(170, 24, 4);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 10px;
+}
+.save:hover {
+    color: rgb(5, 5, 137);
+}
+/** BUBBLES **/ 
+.wrap-section {
+    display: flex;
+    gap: 70px;
+    margin-top: 70px;
+    padding: 25px 0px 25px 190px;
+}
+section {
+    font-family: 'VT323', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    width: 235px;
+    min-width: 235px;
+    height: 130px;
+    padding: 5px;
+
+    background: rgb(4, 4, 4);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 12px;
+    overflow: scroll;
+    opacity: 0.8;
+}
+section::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+section::-webkit-scrollbar-track {
+    background-color: darkgrey;
+    border-radius: 0px 50px 0px 0px;
+}
+section::-webkit-scrollbar-thumb {
+    box-shadow: 0 0 6px black;
+}
+h2, p {
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(240, 235, 235);
+    margin: 0;
+    position: relative;
+}
+.fa-caret-down {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%)
+    bottom: 212px;
+    margin-left: 197px;
+    font-size: 46px;
+    color: rgb(4, 4, 4);
+}
+p {
+    margin-top: 20px;
+}
+.p-margin {
+    margin-top: 37px;
+}
+/** LINE **/
+.line {
+    display: flex;
+    height: 10px;
+    width: 4208px;
+    margin: 75px 51px 0px 90px;
+    background-image: url("images/bricks.png");
+    position: relative;
+}
+.castle {
+    height: 155px;
+    position: absolute;
+    top: -145px;
+    right: -2px;
 }
