@@ -2,22 +2,24 @@
 * {
     box-sizing: border-box;
 }
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
 main {
-    width: 4350px;
-    height: 97.3vh;
+    width: 6290px;
+    height: 100%;
     background-image: url("images/grass.png");
 }
 /** SCREEN **/
 .screen {
     display: flex;
-    padding: 4px;
+    padding: 0.1%;
 }
 .logo {
     display: flex;
     justify-content: center;
-    width: 130px;
-    height: 140px;
-    min-width: 110px;
+    width: 2.3%;
     background: rgb(249, 158, 31);
     border: 2px solid rgb(170, 24, 4);
     border-radius: 12px;
@@ -30,14 +32,17 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-left: 3px;
+}
+.music-stop:hover {
+    display: initial;
 }
 .misc div, .misc a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    margin-left: 3px;
+    width: 169.9%;
+    height: 23.6%;
     background: rgb(249, 158, 31);
     color: rgb(170, 24, 4);
     border: 2px solid rgb(170, 24, 4);
@@ -46,18 +51,25 @@ main {
 .save:hover {
     color: rgb(5, 5, 137);
 }
+/** GAME **/
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65.5%;
+    padding: 25px 0px 25px 190px;
+}
 /** BUBBLES **/ 
 .wrap-section {
     display: flex;
-    gap: 70px;
-    margin-top: 1.61%;
-    padding: 25px 0px 25px 190px;
+    gap: 95px;
 }
 section {
     font-family: 'VT323', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
 
     width: 235px;
     min-width: 235px;
@@ -67,7 +79,8 @@ section {
     background: rgb(4, 4, 4);
     border: 2px solid rgb(170, 24, 4);
     border-radius: 12px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     opacity: 0.8;
 }
 section::-webkit-scrollbar {
@@ -81,19 +94,34 @@ section::-webkit-scrollbar-track {
 section::-webkit-scrollbar-thumb {
     box-shadow: 0 0 6px black;
 }
+section::before {
+    content: '\f0d7';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+    font-weight: 900;
+    font-size: 68px;
+    color: rgb(4, 4, 4);
+    position: absolute;
+    top: 280px;
+}
+section::after {
+    content: '\f111';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+    font-weight: 900;
+    font-size: 30px;
+    color: black;
+
+    position: absolute;
+    top: 520px;
+}
 h2, p {
+    width: 100%;
     font-size: 15px;
     font-weight: 400;
     color: rgb(240, 235, 235);
     margin: 0;
     position: relative;
-}
-.fa-caret-down {
-    position: absolute;
-    bottom: 32.8%;
-    margin-left: 173px;
-    font-size: 68px;
-    color: rgb(4, 4, 4);
 }
 p {
     margin-top: 16%;
@@ -105,14 +133,14 @@ p {
 .line {
     display: flex;
     height: 10px;
-    width: 4208px;
-    margin: 1.72% 51px 0px 90px;
+    width: 6050px;
+    margin-right: 50px;
+    justify-content: flex-end;
     background-image: url("images/bricks.png");
-    position: relative;
 }
 .castle {
     height: 155px;
-    position: absolute;
+    position: relative;
     top: -145px;
-    right: -2px;
+    right: -5px;
 }
