@@ -7,7 +7,7 @@ body {
     overflow-y: hidden;
 }
 main {
-    width: 6290px;
+    width: 6333px;
     height: 100%;
     background-image: url("images/grass.png");
 }
@@ -56,8 +56,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 65.5%;
-    padding: 25px 0px 25px 190px;
+    height: 400px;
+    padding: 40px 0px 25px 190px;
 }
 /** BUBBLES **/ 
 .wrap-section {
@@ -94,7 +94,7 @@ section::-webkit-scrollbar-track {
 section::-webkit-scrollbar-thumb {
     box-shadow: 0 0 6px black;
 }
-section::before {
+section::before { /** ARROW **/
     content: '\f0d7';
     font: var(--fa-font-solid);
     font-family: "Font Awesome 6 free"; 
@@ -102,18 +102,7 @@ section::before {
     font-size: 68px;
     color: rgb(4, 4, 4);
     position: absolute;
-    top: 280px;
-}
-section::after {
-    content: '\f111';
-    font: var(--fa-font-solid);
-    font-family: "Font Awesome 6 free"; 
-    font-weight: 900;
-    font-size: 30px;
-    color: black;
-
-    position: absolute;
-    top: 520px;
+    top: 294px;
 }
 h2, p {
     width: 100%;
@@ -132,15 +121,33 @@ p {
 /** LINE **/
 .line {
     display: flex;
+    justify-content: space-between;
     height: 10px;
-    width: 6050px;
+    width: 6090px;
     margin-right: 50px;
-    justify-content: flex-end;
+    position: relative;
     background-image: url("images/bricks.png");
 }
+.tombstone {
+    height: 26px;
+    position: absolute;
+    top: -16px;
+}
+.statue {
+    height: 105px;
+    position: absolute;
+    left: 160px;
+    top: -105px;
+}
+.avatar {
+    height: 85px;
+    position: absolute;
+    top: -63px;
+    left: 1465px;
+}
 .castle {
-    height: 155px;
-    position: relative;
-    top: -145px;
+    height: 215px;
+    position: absolute;
+    top: -205px;
     right: -5px;
 }
