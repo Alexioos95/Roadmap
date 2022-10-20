@@ -10,20 +10,17 @@ main {
     width: 6380px;
     height: 100%;
     background-image: url("images/grass.png");
-    display: flex;
-    flex-direction: column;
 }
 /** SCREEN **/
 .screen {
-    display: flex;
-    justify-content: space-between;
     padding: 6px;
-    width: 100vw;
-    z-index: 1;
+    height: 156px;
 }
 /** MISC **/
 .misc {
     display: flex;
+    position: fixed;
+    z-index: 1;
 }
 .logo {
     display: flex;
@@ -78,14 +75,14 @@ main {
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
-    padding: 35px 0px 25px 190px;
+    padding: 40px 0px 25px 190px;
 }
 /** BUBBLES **/ 
 .wrap-section {
     display: flex;
     gap: 95px;
 }
-section {
+article {
     font-family: 'VT323', sans-serif;
     display: flex;
     flex-direction: column;
@@ -106,18 +103,18 @@ section {
 
     z-index: 1;
 }
-section::-webkit-scrollbar {
+article::-webkit-scrollbar {
     width: 10px;
     height: 0px;
 }
-section::-webkit-scrollbar-track {
+article::-webkit-scrollbar-track {
     background-color: darkgrey;
     border-radius: 0px 50px 0px 0px;
 }
-section::-webkit-scrollbar-thumb {
+article::-webkit-scrollbar-thumb {
     box-shadow: 0 0 6px black;
 }
-section::before { /** ARROW **/
+article::before { /** ARROW **/
     content: '\f0d7';
     font: var(--fa-font-solid);
     font-family: "Font Awesome 6 free"; 
@@ -187,10 +184,16 @@ p {
     left: 1154px;
     top: -55px;
 }
-.avatar {
-    height: 64px;
+.potion-shop {
+    height: 131px;
     position: absolute;
-    top: -48px;
+    left: 1437px;
+    top: -131px;
+}
+.avatar {
+    height: 55px;
+    position: absolute;
+    top: -37px;
     left: 1465px;
 }
 .mage {
@@ -212,9 +215,8 @@ p {
     left: 2469px;
 }
 .castle {
-    height: 215px;
+    height: 260px;
     position: absolute;
-    top: -205px;
-    right: -5px;
-}
-
+    top: -250px;
+    right: -12px;
+}   
