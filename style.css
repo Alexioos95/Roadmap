@@ -10,16 +10,25 @@ main {
     width: 6380px;
     height: 100%;
     background-image: url("images/grass.png");
+    display: flex;
+    flex-direction: column;
 }
 /** SCREEN **/
 .screen {
     display: flex;
-    padding: 0.1%;
+    justify-content: space-between;
+    padding: 6px;
+    width: 100vw;
+    z-index: 1;
+}
+/** MISC **/
+.misc {
+    display: flex;
 }
 .logo {
     display: flex;
     justify-content: center;
-    width: 2.3%;
+    width: 142px;
     background: rgb(249, 158, 31);
     border: 2px solid rgb(170, 24, 4);
     border-radius: 12px;
@@ -28,7 +37,7 @@ main {
     height: 140px;
     width: 100%;
 }
-.misc {
+.misc-button {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -37,7 +46,7 @@ main {
 .music-stop:hover {
     display: initial;
 }
-.misc div, .misc a {
+.misc-button div, .misc-button a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,13 +60,25 @@ main {
 .save:hover {
     color: rgb(5, 5, 137);
 }
+/** PLAYER'S CARD **/
+.player-card {  
+    display: flex;
+    justify-content: center;
+    width: 325px;
+    height: 144px;
+    background: rgb(249, 158, 31);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 12px;
+    position: fixed;
+    right: 5px;
+}
 /** GAME **/
 .game {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 400px;
-    padding: 40px 0px 25px 190px;
+    padding: 35px 0px 25px 190px;
 }
 /** BUBBLES **/ 
 .wrap-section {
