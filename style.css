@@ -172,9 +172,28 @@ p {
     top: -48px;
     left: 1465px;
 }
+.mage {
+    height: 52px;
+    position: absolute;
+    top: -47px;
+    left: 1817px;
+}
+.merchant-guild {
+    height: 135px;
+    position: absolute;
+    top: -129px;
+    left: 2120px;
+}
+.catapult {
+    height: 40px;
+    position: absolute;
+    top: -28px;
+    left: 2469px;
+}
 .castle {
     height: 215px;
     position: absolute;
     top: -205px;
     right: -5px;
 }
+
