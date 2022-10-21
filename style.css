@@ -7,6 +7,7 @@ body {
     overflow-y: hidden;
 }
 main {
+    font-family: 'VT323', sans-serif;
     width: 6380px;
     height: 100%;
     background-image: url("images/grass.png");
@@ -60,22 +61,46 @@ main {
 /** PLAYER'S CARD **/
 .player-card {  
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     width: 325px;
     height: 144px;
+    padding: 4px;
     background: rgb(249, 158, 31);
     border: 2px solid rgb(170, 24, 4);
     border-radius: 12px;
     position: fixed;
     right: 5px;
+    z-index: 1;
+}
+.stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 130px;
+}
+.stats img {
+    height: 25px;
+    width: 25px;
+}
+.stats span {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    font-size: 20px;è
+}
+.card-icon {
+    height: 132px;
+    border-radius: 0 6px 6px 0;
 }
 /** GAME **/
 .game {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px;
-    padding: 40px 0px 25px 190px;
+    height: 435px;
+    padding: 50px 0px 25px 190px;
 }
 /** BUBBLES **/ 
 .wrap-section {
@@ -122,7 +147,7 @@ article::before { /** ARROW **/
     font-size: 68px;
     color: rgb(4, 4, 4);
     position: absolute;
-    top: 294px;
+    top: 305px;
 }
 h2, p {
     width: 100%;
