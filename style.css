@@ -81,8 +81,8 @@ main {
     width: 130px;
 }
 .stats img {
-    height: 25px;
-    width: 25px;
+    height: 19px;
+    width: 19px;
 }
 .stats span {
     display: flex;
@@ -233,11 +233,17 @@ p {
     top: -129px;
     left: 2120px;
 }
+.military-camp {
+    height: 88px;
+    position: absolute;
+    top: -70px;
+    left: 2444px;
+}
 .catapult {
     height: 40px;
     position: absolute;
     top: -28px;
-    left: 2469px;
+    left: 2790px;
 }
 .castle {
     height: 260px;
