@@ -28,11 +28,11 @@
                         <img src="images/logo.png" alt="Logo de Legend of Alexis.">
                     </div>
                     <div class="misc-button">
-                        <div>
+                        <div class="music-div" title="Couper/Lancer la musique." onclick="music_player()">
                             <i class="fa-solid fa-music"></i>
                             <audio autoplay loop src="music.mp3">
                         </div>
-                        <div>
+                        <div class="inventory" title="Ouvrir l'inventaire." onclick="inventory()">
                             <i class="fa-solid fa-sack-dollar"></i>
                         </div>
                         <a class="save" href="https://alexispayen.com" title="Sauvegarder et quitter.">
@@ -100,59 +100,59 @@
                         Quel récompense Alexis pourra-t-il bien obtenir... ?<br/>
                     </article>
                     <!--Mage Dress/Magic-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 4 :<br/>La vie est facile avec le Framework CSS, Bootstrap.</h2>
                     </article>
                     <!--Bank Account/Respect-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 5 :<br/>Améliorer son référencement sur les moteurs de recherche. (SEO)</h2>
                     </article>
                     <!--Swordmanship/Attack-->
                     <!--Recognition++-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 6 :<br/>JavaScript, de la programmation algorithmique !</h2>
                     </article>
                     <!--Shield/Defense-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 7 :<br/>TypeScript, la mise à jour sécurisée du JavaScript.</h2>
                     </article>
                     <!--Rusty Sword/?-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 8 :<br/>L'ancien Framework JavaScript populaire, jQuery.</h2>
                     </article>
                     <!--/-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 9 :<br/>Les applications web complexes avec React.js.</h2>
                     </article>
                     <!--/-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 10 :<br/>Concevoir des applications web One-Page avec Angular.js.</h2>
                     </article>
                     <!--/-->
                     <!--Recognition++-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 11 :<br/>Devenir un couteau suisse avec Vue.js.</h2>
                     </article>
                     <!--/-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 12 :<br/>Prendre des notions de Back-end avec PHP.</h2>
                     </article>
                     <!--/-->
                     <!--Recognition++-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 13 :<br/>Gérer des bases de données avec MySQL.</h2>
                     </article>
                     <!--/-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 14 :<br/>Créer une application Back-end avec Node.js & Express.js.</h2>
                     </article>
                     <!--/-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 15 :<br/>Le monde du NoSQL avec MongoDB.</h2>
                     </article>
                     <!--/-->
                     <!--Recognition++-->
-                    <article>
+                    <article class="locked">
                         <h2>Quest 16 :<br/>Découvrir la magie des CMS avec WordPress.</h2>
                     </article>
                 </div>
@@ -190,5 +190,51 @@ Il ne comprend pas ce que c'est d'ici..." alt="Catapulte."/>
                 </div>
             </div>
         </main>
+
+        <script>
+            function music_player()
+            {   
+                const music = document.querySelector("audio");
+                const music_div = document.querySelector(".music-div");
+                const slash = document.createElement("div");
+                
+                if (music.paused)
+                {
+                    music.play();
+                    const slash = document.querySelector(".slash_class");
+                    music_div.removeChild(slash);
+                }
+                else
+                {
+                    music.pause();
+                    music_div.appendChild(slash);
+                    slash.classList.add("slash_class");
+                    slash.style.position = "absolute";
+                    slash.style.backgroundColor = "rgb(170, 24, 4)";
+                    slash.style.border = "1px solid rgb(249, 158, 31)";
+                    slash.style.width = "22px";
+                    slash.style.height = "3px";
+                    slash.style.transform = "rotate(45deg)";
+                }
+            }
+
+            function inventory()
+            {
+                const game = document.querySelector(".game");
+                const inventory = document.createElement("div");
+                game.appendChild(inventory);
+                inventory.classList.add("inventory_class");
+                inventory.style.position = "absolute";
+                inventory.style.top = "50%";
+                inventory.style.left = "50%";
+                inventory.style.transform = "translate(-50%, -50%)";
+                inventory.style.width = "80%";
+                inventory.style.height = "84%";
+                inventory.style.backgroundColor = "rgb(249, 158, 31)";
+                inventory.style.border = "2px solid rgb(170, 24, 4)";
+                inventory.style.borderRadius = "12px";
+                inventory.style.zIndex = "1";
+            }
+        </script>
     </body>
 </html>

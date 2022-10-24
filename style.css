@@ -41,9 +41,6 @@ main {
     justify-content: space-around;
     margin-left: 3px;
 }
-.music-stop:hover {
-    display: initial;
-}
 .misc-button div, .misc-button a {
     display: flex;
     justify-content: center;
@@ -55,11 +52,17 @@ main {
     border: 2px solid rgb(170, 24, 4);
     border-radius: 10px;
 }
+.music-div:hover {
+    color: red;
+}
+.inventory:hover {
+    color: #f1f115;
+}
 .save:hover {
     color: rgb(5, 5, 137);
 }
 /** PLAYER'S CARD **/
-.player-card {  
+.player-card {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,7 +91,7 @@ main {
     display: flex;
     justify-content: center;
     width: 40px;
-    font-size: 20px;è
+    font-size: 20px;
 }
 .card-icon {
     height: 132px;
@@ -118,14 +121,12 @@ article {
     min-width: 235px;
     height: 130px;
     padding: 5px;
-
     background: rgb(4, 4, 4);
     border: 2px solid rgb(170, 24, 4);
     border-radius: 12px;
     overflow-y: scroll;
     overflow-x: hidden;
     opacity: 0.8;
-
     z-index: 1;
 }
 article::-webkit-scrollbar {
@@ -149,6 +150,12 @@ article::before { /** ARROW **/
     position: absolute;
     top: 305px;
 }
+.locked {
+    opacity: 0.6;
+}
+.locked::-webkit-scrollbar-track {
+    background-color: transparent;
+}
 h2, p {
     width: 100%;
     font-size: 15px;
@@ -168,7 +175,7 @@ p {
     display: flex;
     justify-content: space-between;
     height: 10px;
-    width: 6130px;
+    width: 6014px;
     margin-right: 50px;
     position: relative;
     background-image: url("images/bricks.png");
@@ -207,7 +214,7 @@ p {
     height: 57px;
     position: absolute;
     left: 1154px;
-    top: -55px;
+    top: -50px;
 }
 .potion-shop {
     height: 131px;
@@ -246,8 +253,8 @@ p {
     left: 2790px;
 }
 .castle {
-    height: 260px;
+    height: 230px;
     position: absolute;
-    top: -250px;
-    right: -12px;
-}   
+    top: -230px;
+    right: -117px;
+}
