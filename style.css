@@ -2,178 +2,381 @@
 * {
     box-sizing: border-box;
 }
-.center {
+body {
+    height: 100vh;
+    overflow-y: hidden;
+}
+main {
+    font-family: 'VT323', sans-serif;
+    width: 6380px;
+    height: 100%;
+    background-image: url("images/road/grass.png");
+}
+/** SCREEN **/
+.screen {
+    padding: 6px;
+    height: 156px;
+}
+/** MISC **/
+.misc {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 142px;
+    background: rgb(249, 158, 31);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 12px;
+}
+.logo img {
+    height: 140px;
+    width: 100%;
+}
+.misc-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 3px;
+}
+.misc-buttons button, .misc-buttons a {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 112%;
+    height: 23.6%;
+    background: rgb(249, 158, 31);
+    color: rgb(170, 24, 4);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 10px;
+    cursor: pointer;
 }
-.hide-it {
-    display: none;
+.music-button:hover {
+    color: red;
 }
-/** ROADMAP **/
-main {
-    font-family: "Philosopher", sans-serif;
-
-    max-width: 800px;
-    margin: auto;
-    padding: 25px;
-
+.inventory-button:hover {
+    color: #f1f115;
+}
+.save:hover {
+    color: rgb(5, 5, 137);
+}
+/** PLAYER'S CARD **/
+.player-card {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    position: relative;
-    background-image: url("images/background.png");
-
-    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    width: 270px;
+    height: 144px;
+    padding: 4px;
+    background: rgb(249, 158, 31);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 12px;
+    position: fixed;
+    right: 5px;
+    z-index: 1;
 }
-.line {
-    width: 10px;
+.stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     height: 100%;
-    background: white;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 2px black;
-    left: 0;
-    right: 0;
-    top: 55px;
-    z-index: 0;
+    width: 132px;
 }
-.avatar {
-    position: absolute;
-    right: -90px;
-    top: -32px;
-    height: 90px;
-    width: 90px;
+.stats img {
+    height: 19px;
+    width: 19px;
 }
-/** BUBBLES **/
-section {
+.stats span {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    font-size: 20px;
+}
+.card-icon {
+    height: 132px;
+    border-radius: 0 6px 6px 0;
+}
+/** GAME **/
+.game {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: calc(50% - 41px);
-    min-height: 165px;
-    padding: 15px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background: white;
-    position: relative;
+    height: 435px;
+    padding: 50px 0px 25px 190px;
 }
-.align-right {
+/** INVENTORY **/
+.inventory {
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    width: 80vw;
+    height: 60vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background: rgb(249, 158, 31);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 12px;
+    z-index: 2;
+
+    display: none;
+}
+.stuff {
     display: flex;
-    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+    height: 95%;
+    padding-bottom: 10px;
 }
-h2 {
-    font-size: 20px;
-    font-weight: 700;
-    color: rgb(27, 79, 82);
-    margin: 0;
-    position: relative;
+.stuff section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    background: black;
+    opacity: 0.8;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.stuff section::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+.stuff section::-webkit-scrollbar-track {
+    background-color: darkgrey;
+    border-radius: 0px 50px 0px 0px;
+}
+.stuff section::-webkit-scrollbar-thumb {
+    box-shadow: 0 0 6px black;
+}
+.stuff img, .stuff i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background: rgb(34, 32, 32);
+    font-size: 70px;
+}
+.close-button {
+    width: 100%;
+    align-self: flex-end;
+    background: rgb(170, 24, 4);
+    color: rgb(249, 158, 31);
+    border-radius: 8px;
+    cursor: pointer;
+}
+/** ICONS INVENTORY **/
+.fa-html5, .fa-git-alt {
+    color: rgb(240, 81, 52);
+}
+.fa-css3 {
+    color: rgb(63, 72, 204);
+}
+.fa-c {
+    color: white;
+}
+.fa-sass {
+    color: rgb(205, 103, 152);
+}
+.fa-js {
+    color: #f7df1e;
+}
+.currently {
+    opacity: 0.2;
+}
+/** BUBBLES **/ 
+.wrap-section {
+    display: flex;
+    gap: 95px;
+}
+article {
+    font-family: 'VT323', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 235px;
+    min-width: 235px;
+    height: 130px;
+    padding: 5px;
+    background: rgb(4, 4, 4);
+    border: 2px solid rgb(170, 24, 4);
+    border-radius: 12px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    opacity: 0.8;
     z-index: 1;
 }
-p {
+article::-webkit-scrollbar {
+    width: 10px;
+    height: 0px;
+}
+article::-webkit-scrollbar-track {
+    background-color: darkgrey;
+    border-radius: 0px 50px 0px 0px;
+}
+article::-webkit-scrollbar-thumb {
+    box-shadow: 0 0 6px black;
+}
+article::before { /** ARROW **/
+    content: '\f0d7';
+    font: var(--fa-font-solid);
+    font-family: "Font Awesome 6 free"; 
+    font-weight: 900;
+    font-size: 68px;
+    color: rgb(4, 4, 4);
+    position: absolute;
+    top: 305px;
+}
+.locked {
+    opacity: 0.6;
+}
+.locked::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+h2, p {
+    width: 100%;
     font-size: 15px;
-    margin-bottom: 0;
+    font-weight: 400;
+    color: rgb(240, 235, 235);
+    margin: 0;
+    position: relative;
 }
-.learned {
-    border: 2px solid rgb(27, 79, 82);
-    background: rgb(197, 191, 191);
+p {
+    margin-top: 16%;
 }
-.learning {
-    border: 2px solid rgb(255, 209, 25);
+.p-margin {
+    margin-top: 24.9%;
 }
-/** ICONS COMPLETION **/
-.fa-medal {
-    color: rgb(180, 180, 43);
-    font-size: 40px;
+/** LINE **/
+.line {
+    display: flex;
+    justify-content: space-between;
+    height: 10px;
+    width: 6014px;
+    margin-right: 50px;
+    position: relative;
+    background-image: url("images/road/bricks.png");
+}
+.tombstone {
+    height: 26px;
     position: absolute;
-    right: 5px;
-    top: 0;
+    top: -16px;
 }
-.fa-trophy {
+.statue {
+    height: 105px;
     position: absolute;
-    font-size: 20px;
-    top: 16px;
+    left: 160px;
+    top: -105px;
 }
-.fa-trophy-left {
-    right: -55px;
-}
-.fa-trophy-right {
-    left: -54px;
-}
-/** ARROW BUBBLES + CIRCLE MAIN LINE**/   
-.fa-caret-left {
-    color: white;
-    font-size: 23px;
+.clothings {
+    height: 30px;
     position: absolute;
-    left: -7px;
+    left: 517px;
+    top: -30px;
 }
-.fa-caret-left::after { /** CIRCLE **/
-    content: "";
-    width: 50px;
-    height: 50px;
-    background: white;
-    border: 2px solid black;
-    border-radius: 50%;
+.boat {
+    height: 115px;
     position: absolute;
-    left: -63px;
-    top: -17px;
+    left: 814px;
+    top: -115px;
+    z-index: 1;
 }
-.fa-caret-right {
-    color: white;
-    font-size: 23px;
+.water {
     position: absolute;
-    right: -7px;
+    left: 832px;
+    top: -558px;
+    z-index: 0;
 }
-.fa-caret-right::after { /** CIRCLE **/
-    content: "";
-    width: 50px;
-    height: 50px;
-    background: white;
-    border: 2px solid black;
-    border-radius: 50%;
+.jousting-knight {
+    height: 57px;
     position: absolute;
-    right: -63px;
-    top: -17px;
+    left: 1154px;
+    top: -50px;
 }
-.fa-caret-learned {
-    color: rgb(197, 191, 191);
+.potion-shop {
+    height: 131px;
+    position: absolute;
+    left: 1437px;
+    top: -131px;
 }
-.fa-caret-learned::after {
-    background: rgb(197, 191, 191);
+.avatar {
+    height: 55px;
+    position: absolute;
+    top: -37px;
+    left: 1465px;
 }
-
-/** MEDIA QUERY PHONES **/
-@media screen and (max-width: 768px) {
-    .hide-it {
-        display: initial;
-    }
-    .line, .fa-caret-right, .fa-caret-right::after, .fa-trophy-left {
-        display: none;
-    }
-    .align-left {
-        display: flex;
-        justify-content: flex-end;
-    }
-    section {
-        width: 92%;
-    }
-    .avatar {
-        height: 55px;
-        width: 55px;
-        top: -14px;
-        left: -55px;
-    }
-    .fa-caret-left::after {
-        width: 25px;
-        height: 25px;
-        left: -37px;
-        top: -5px;
-    }
-    .fa-trophy-right {
-        font-size: 15px;
-        left: -38px;
-        bottom: -4px;
-        top: 17px;
-    }
+.mage {
+    height: 52px;
+    position: absolute;
+    top: -47px;
+    left: 1817px;
+}
+.merchant-guild {
+    height: 135px;
+    position: absolute;
+    top: -129px;
+    left: 2120px;
+}
+.military-camp {
+    height: 88px;
+    position: absolute;
+    top: -70px;
+    left: 2444px;
+}
+.catapult {
+    height: 40px;
+    position: absolute;
+    top: -28px;
+    left: 2790px;
+}
+.civil {
+    height: 46px;
+    position: absolute;
+    top: -41px;
+    left: 2865px;
+}
+.empty-chest {
+    height: 30px;
+    position: absolute;
+    top: -41px;
+    left: 3000px;
+}
+.castle {
+    height: 230px;
+    position: absolute;
+    top: -230px;
+    right: -117px;
+}
+/** CHAT **/
+.chat {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 484px;
+    height: 155px;
+    margin-top: 25px;
+    margin-left: 6px;
+    padding-left: 6px;
+    background: rgb(4, 4, 4);
+    border: 5px solid white;
+    opacity: 0.8;
+}
+.chat p {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
+}
+p span {
+    position: absolute;
+    top: 102px;
+    right: 12px;
 }
