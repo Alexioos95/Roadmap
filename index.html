@@ -32,7 +32,7 @@
                             <i class="fa-solid fa-music"></i>
                             <audio autoplay loop src="music.mp3">
                         </button>
-                        <button class="inventory-button" title="Ouvrir l'inventaire." onclick="inventory()">
+                        <button class="inventory-button" title="Ouvrir/Fermer l'inventaire." onclick="inventory()">
                             <i class="fa-solid fa-sack-dollar"></i>
                         </button>
                         <a class="save" href="https://alexispayen.com" title="Sauvegarder et quitter.">
@@ -54,7 +54,7 @@
                         <img src="images/card/defense.png" title="Points de défense" alt="Icone Bouclier">
                         <span>50</span>
                         <img src="images/card/intelligence.png" title="Points d'intelligence" alt="Icone Cerveau">
-                        <span>100</span>
+                        <span>125</span>
                         <img src="images/card/respect.png" title="Points de respect" alt="Icone poignée de main">
                         <span>100</span>
                         <img src="images/card/rank.png" title="Rang au sein de l'ordre des chevaliers : Apprenti" alt="Icone trophée">
@@ -71,8 +71,8 @@
                         <section>
                             <img src="images/inventory/sword.png" title="Récompense de la Quest 1." alt="Épée légendaire.">
                             <img src="images/inventory/armor.png" title="Récompense de la Quest 2." alt="Armure de chevalier.">
-                            <img src="images/inventory/map.png" title="Récompense de la Quest 3." alt="Carte.">
-                            <img src="images/inventory/medal.png" title="Récompense de la Quest 4." alt="Médaille.">
+                            <img src="images/inventory/map.png" title="Récompense de la Secret Quest 1." alt="Carte.">
+                            <img src="images/inventory/medal.png" title="Récompense de la Secret Quest 2." alt="Médaille.">
                             <img src="images/inventory/empty.png" alt="?">
                             <img src="images/inventory/empty.png" alt="?">
                             <img src="images/inventory/empty.png" alt="?">
@@ -151,7 +151,7 @@
                         <h2>Secret Quest 2 :<br/>L'ancêtre, le C !</h2>
                         <p class="p-margin">Quest terminée !<br/>
                         Alexis a obtenu...<br/> 
-                        ... une MEDAILLE ! (+100 points de RESPECT)</p>
+                        ... une MEDAILLE ! (+100 points de RESPECT et +25 points d'INTELLIGENCE)</p>
                     </article>
                     <!--Magical Potion/Mana-->
                     <article>
@@ -178,48 +178,48 @@
                     <article class="locked">
                         <h2>Quest 7 :<br/>TypeScript, la mise à jour sécurisée du JavaScript.</h2>
                     </article>
-                    <!--Rusty Sword/?-->
+                    <!--Rusty Sword/Attack-->
                     <article class="locked">
                         <h2>Quest 8 :<br/>L'ancien Framework JavaScript populaire, jQuery.</h2>
                     </article>
-                    <!--/-->
+                    <!--Magical Swordmanship/Attack/Magic-->
                     <article class="locked">
-                        <h2>Quest 9 :<br/>Les applications web complexes avec React.js.</h2>
+                        <h2>Quest 9 :<br/>Les applications web complexes avec React.</h2>
                     </article>
-                    <!--/-->
+                    <!--Spear/Attack-->
                     <article class="locked">
-                        <h2>Quest 10 :<br/>Concevoir des applications web One-Page avec Angular.js.</h2>
+                        <h2>Quest 10 :<br/>Concevoir des applications web One-Page avec Angular.</h2>
                     </article>
-                    <!--/-->
+                    <!--Jeanne's Blessing/ALL-->
                     <!--Recognition++-->
                     <article class="locked">
-                        <h2>Quest 11 :<br/>Devenir un couteau suisse avec Vue.js.</h2>
+                        <h2>Quest 11 :<br/>Devenir un couteau suisse avec Vue.</h2>
                     </article>
-                    <!--/-->
+                    <!--Grimoire/Magic-->
                     <article class="locked">
                         <h2>Quest 12 :<br/>Prendre des notions de Back-end avec PHP.</h2>
                     </article>
-                    <!--/-->
+                    <!--/HP-->
                     <!--Recognition++-->
                     <article class="locked">
                         <h2>Quest 13 :<br/>Gérer des bases de données avec MySQL.</h2>
                     </article>
                     <!--/-->
                     <article class="locked">
-                        <h2>Quest 14 :<br/>Créer une application Back-end avec Node.js & Express.js.</h2>
+                        <h2>Quest 14 :<br/>Créer une application Back-end avec Node & Express.</h2>
                     </article>
-                    <!--/-->
+                    <!--Magical Pendant/Mana-->
                     <article class="locked">
                         <h2>Quest 15 :<br/>Le monde du NoSQL avec MongoDB.</h2>
                     </article>
-                    <!--/-->
+                    <!--Mage's Scepter/Magic/Respect-->
                     <!--Recognition++-->
                     <article class="locked">
                         <h2>Quest 16 :<br/>Découvrir la magie des CMS avec WordPress.</h2>
                     </article>
                 </div>
-                <!--LINE-->
-                <div class="line">
+                <!--ROAD-->
+                <div class="road">
                     <img class="tombstone" src="images/road/tombstone.png" title="Diantre, une pierre tombale bloque le passage !" alt="Pierre tombale marquant le début de l'aventure."/>
                     <img class="statue" src="images/road/knight-statue.png" title="Statue à l'effigi du héro du web.
 Elle a motivé Alexis a se lancer à la poursuite de son rêve !
@@ -249,40 +249,42 @@ Mais il est trop loin pour savoir ce qui se passe..." alt="Camp militaire."/>
                     <img class="catapult" src="images/road/catapult.png" title="Alexis peut vaguement distinguer un engin qui bloque la route...
 Il ne comprend pas ce que c'est d'ici..." alt="Catapulte."/>
                     <img class="civil" src="images/road/civil.png" alt="Personnage."/>
-                    <img class="empty-chest" src="images/road/empty-chest.png" alt="Coffre vide."/>
+                    <img class="empty-chest" src="images/road/empty-chest.png" title="Alexis peut à peine voir ce qui ressemble à un coffre..." alt="Coffre vide."/>
+                    <img class="jeanne" src="images/road/jeanne.png" alt="Jeanne d'Arc."/>
                     <img class="castle" src="images/road/castle.png" alt="Château final."/> 
                 </div>
-
             </section>
-            <section class="chat">
+            <!--CHAT-->
+            <section class="chat" onclick="chat_box()">
                 <img src="images/chat-icon.png" alt="Un autre avatar d'Alexis.">
-                <p>Escadron du web, Chevalier apprenti Alexis, pâré au combat !<span>...</span>
+                <p>Escadron du web, Chevalier apprenti Alexis, pâré au combat !</p>
+                <span>...</span>
             </section>
         </main>
-
+        <!--JAVASCRIPT-->
         <script>
             function music_player()
             {   
                 const music = document.querySelector("audio");
-                const music_div = document.querySelector(".music-button");
-                const slash = document.createElement("div");
+                const music_button = document.querySelector(".music-button");
                 
                 if (music.paused)
                 {
                     music.play();
                     const slash = document.querySelector(".slash_class");
-                    music_div.removeChild(slash);
+                    music_button.removeChild(slash);
                 }
                 else
                 {
                     music.pause();
-                    music_div.appendChild(slash);
+                    const slash = document.createElement("div");
+                    music_button.appendChild(slash);
                     slash.classList.add("slash_class");
                     slash.style.position = "absolute";
-                    slash.style.backgroundColor = "rgb(170, 24, 4)";
-                    slash.style.border = "1px solid rgb(249, 158, 31)";
                     slash.style.width = "22px";
                     slash.style.height = "3px";
+                    slash.style.backgroundColor = "rgb(170, 24, 4)";
+                    slash.style.border = "1px solid rgb(249, 158, 31)";
                     slash.style.transform = "rotate(45deg)";
                 }
             }
@@ -303,6 +305,24 @@ Il ne comprend pas ce que c'est d'ici..." alt="Catapulte."/>
                     inventory.style.display = "flex";
                     icon.style.color = "rgb(241, 241, 21)";
                 }
+            }
+
+            function chat_box()
+            {
+                const chat = document.querySelector(".chat p");
+                let i = Math.floor(7*Math.random());
+                let str = new Array();
+                str[0] = "J'espère pouvoir rencontrer la princesse une fois devenu garde royal... *BLUSH*";
+                str[1] = "Mourir avec honneur est bien mieux que de vivre en disgrâce, c'est pourquoi je ne reculerai devant nul obstacle !";
+                str[2] = "Je suis peut-être petit, mais je mourrai en véritable colosse !";
+                str[3] = "Je suis l'ossature de mon épée.\nDe fer est mon corps, de feu est mon sang... !";
+                str[4] = "Vivre, et mourir par la lame... !";
+                str[5] = "Si je rencontre la mort, je ne lui dirai qu'une seule chose : PAS AUJOURD'HUI !";
+                str[6] = "Mon père était aussi chevalier autrefois, et puis il s'est pris une flèche dans le genou...";
+                str[7] = "";
+                str[8] = "";
+
+                chat.innerText = str[i];
             }
         </script>
     </body>
