@@ -159,7 +159,7 @@
                         <p>Quest acceptée !<br/>
                         Quel récompense Alexis pourra-t-il bien obtenir... ?<br/>
                     </article>
-                    <!--Mage Dress/Magic-->
+                    <!--Magical Cape/Magic-->
                     <article class="locked">
                         <h2>Quest 4 :<br/>La vie est facile avec le Framework CSS, Bootstrap.</h2>
                     </article>
@@ -250,6 +250,7 @@ Mais il est trop loin pour savoir ce qui se passe..." alt="Camp militaire."/>
 Il ne comprend pas ce que c'est d'ici..." alt="Catapulte."/>
                     <img class="civil" src="images/road/civil.png" alt="Personnage."/>
                     <img class="empty-chest" src="images/road/empty-chest.png" title="Alexis peut à peine voir ce qui ressemble à un coffre..." alt="Coffre vide."/>
+                    <img class="rune-stone" src="images/road/rune-stone.png" alt="Une pierre runique."/>
                     <img class="jeanne" src="images/road/jeanne.png" alt="Jeanne d'Arc."/>
                     <img class="castle" src="images/road/castle.png" alt="Château final."/> 
                 </div>
@@ -257,7 +258,7 @@ Il ne comprend pas ce que c'est d'ici..." alt="Catapulte."/>
             <!--CHAT-->
             <section class="chat" onclick="chat_box()">
                 <img src="images/chat-icon.png" alt="Un autre avatar d'Alexis.">
-                <p>Escadron du web, Chevalier apprenti Alexis, pâré au combat !</p>
+                <p>Escadron du web, Chevalier apprenti Alexis, paré au combat !</p>
                 <span>...</span>
             </section>
         </main>
@@ -310,7 +311,7 @@ Il ne comprend pas ce que c'est d'ici..." alt="Catapulte."/>
             function chat_box()
             {
                 const chat = document.querySelector(".chat p");
-                let i = Math.floor(7*Math.random());
+                let i = Math.floor(9*Math.random());
                 let str = new Array();
                 str[0] = "J'espère pouvoir rencontrer la princesse une fois devenu garde royal... *BLUSH*";
                 str[1] = "Mourir avec honneur est bien mieux que de vivre en disgrâce, c'est pourquoi je ne reculerai devant nul obstacle !";
@@ -319,8 +320,8 @@ Il ne comprend pas ce que c'est d'ici..." alt="Catapulte."/>
                 str[4] = "Vivre, et mourir par la lame... !";
                 str[5] = "Si je rencontre la mort, je ne lui dirai qu'une seule chose : PAS AUJOURD'HUI !";
                 str[6] = "Mon père était aussi chevalier autrefois, et puis il s'est pris une flèche dans le genou...";
-                str[7] = "";
-                str[8] = "";
+                str[7] = "*Fredonne*\n*Les oiseaux tombent du ciel, paralysés...*\nAiment-t-ils ma musique à ce point... ?";
+                str[8] = "Dans mon village d'enfance, se trouve un étrange chevalier qui guerroie à l'aide d'une pelle...";
 
                 chat.innerText = str[i];
             }

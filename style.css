@@ -209,7 +209,7 @@ article {
     padding: 5px;
     background: rgb(4, 4, 4);
     border: 2px solid rgb(170, 24, 4);
-    border-radius: 12px;
+    border-radius: 7px;
     overflow-y: scroll;
     overflow-x: hidden;
     opacity: 0.8;
@@ -347,6 +347,12 @@ p {
     top: -20px;
     left: 3157px;
 }
+.rune-stone {
+    height: 25px;
+    position: absolute;
+    top: -23px;
+    left: 3490px;
+}
 .jeanne {
     height: 72px;
     position: absolute;
@@ -377,8 +383,8 @@ p {
     user-select: none;
 }
 .chat p {
-    width: 75%;
-    margin-top: 15px;
+    width: 77.1%;
+    margin-top: 10px;
     font-size: 18px;
 }
 .chat span {
