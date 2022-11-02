@@ -30,6 +30,8 @@ main {
     background: rgb(249, 158, 31);
     border: 2px solid rgb(170, 24, 4);
     border-radius: 12px;
+    user-select: none;
+    pointer-events: none;
 }
 .logo img {
     height: 140px;
@@ -281,10 +283,10 @@ p {
     top: -30px;
 }
 .boat {
-    height: 115px;
+    height: 92px;
     position: absolute;
-    left: 814px;
-    top: -115px;
+    left: 818px;
+    top: -92px;
     z-index: 1;
 }
 .water {
@@ -312,10 +314,10 @@ p {
     left: 1465px;
 }
 .mage {
-    height: 52px;
+    height: 49px;
     position: absolute;
-    top: -47px;
-    left: 1817px;
+    top: -44px;
+    left: 1818px;
 }
 .merchant-guild {
     height: 135px;
@@ -324,27 +326,21 @@ p {
     left: 2120px;
 }
 .military-camp {
-    height: 88px;
+    height: 84px;
     position: absolute;
-    top: -70px;
+    top: -67px;
     left: 2444px;
 }
 .catapult {
-    height: 40px;
+    height: 37px;
     position: absolute;
-    top: -28px;
-    left: 2788px;
-}
-.civil {
-    height: 46px;
-    position: absolute;
-    top: -41px;
-    left: 2865px;
+    top: -25px;
+    left: 2793px;
 }
 .empty-chest {
-    height: 21px;
+    height: 20px;
     position: absolute;
-    top: -20px;
+    top: -18px;
     left: 3157px;
 }
 .rune-stone {
@@ -353,11 +349,29 @@ p {
     top: -23px;
     left: 3490px;
 }
-.jeanne {
-    height: 72px;
+.bamboo {
+    height: 25px;
     position: absolute;
-    top: -67px;
-    left: 4132px;
+    top: -23px;
+    left: 3814px;
+}
+.civil {
+    height: 44px;
+    position: absolute;
+    top: -37px;
+    left: 3841px;
+}
+.jeanne {
+    height: 67px;
+    position: absolute;
+    top: -60px;
+    left: 4135px;
+}
+.manor {
+    height: 115px;
+    position: absolute;
+    top: -115px;
+    left: 4408px;
 }
 .castle {
     height: 230px;
